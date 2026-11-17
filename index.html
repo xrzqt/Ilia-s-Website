@@ -610,7 +610,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   ];
   var vp = document.getElementById("vp"), player = document.getElementById("player"), segsEl = document.getElementById("segs");
   var chapEl = document.getElementById("chapters"), pGame = document.getElementById("pGame"), pCount = document.getElementById("pCount");
-  var list = CL.slice(), cur = 0, started = false;
+  var list = CL.slice(), cur = 0, started = false, base = "clips/", tried = false;
   function fmt(t) { t = Math.round(t); return "0:" + (t < 10 ? "0" : "") + t; }
   function build() {
     segsEl.innerHTML = ""; chapEl.innerHTML = "";
@@ -619,7 +619,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
       b.innerHTML = "<i></i>"; b.addEventListener("click", function () { load(i, true); }); segsEl.appendChild(b);
       var n = CL.indexOf(c) + 1;
       var ch = document.createElement("button"); ch.className = "chap";
-      ch.innerHTML = '<span class="th"><img src="clips/' + c[0] + '.jpg" alt="" loading="lazy"><span class="dur">' + fmt(c[2]) + '</span></span><span class="cl">Clip ' + (n < 10 ? "0" : "") + n + '</span><span class="cg">' + G[c[1]] + '</span>';
+      ch.innerHTML = '<span class="th"><img src="clips/' + c[0] + '.jpg" alt="" loading="lazy" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=\'' + c[0] + '.jpg\'}"><span class="dur">' + fmt(c[2]) + '</span></span><span class="cl">Clip ' + (n < 10 ? "0" : "") + n + '</span><span class="cg">' + G[c[1]] + '</span>';
       ch.addEventListener("click", function () { load(i, true); }); chapEl.appendChild(ch);
     });
   }
@@ -631,7 +631,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   }
   function load(i, play) {
     cur = (i + list.length) % list.length;
-    vp.src = "clips/" + list[cur][0] + ".mp4"; vp.poster = "clips/" + list[cur][0] + ".jpg";
+    vp.src = base + list[cur][0] + ".mp4"; vp.poster = base + list[cur][0] + ".jpg";
     mark(); if (play) go();
   }
   function go() { started = true; var p = vp.play(); if (p && p.catch) p.catch(function () { setPaused(true); }); }
@@ -640,6 +640,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
     document.getElementById("icPlay").innerHTML = x ? '<path d="M4 2.5v11l9-5.5z" fill="currentColor"/>' : '<path d="M4 3h3v10H4zM9 3h3v10H9z" fill="currentColor"/>';
     document.getElementById("pPlay").setAttribute("aria-label", x ? "Play" : "Pause");
   }
+  vp.addEventListener("error", function () {
+    if (tried) return; tried = true; base = base ? "" : "clips/";
+    var wasStarted = started; vp.src = base + list[cur][0] + ".mp4"; vp.poster = base + list[cur][0] + ".jpg"; if (wasStarted) go();
+  });
   vp.addEventListener("play", function () { setPaused(false); });
   vp.addEventListener("pause", function () { setPaused(true); });
   vp.addEventListener("timeupdate", function () { var s = segsEl.children[cur]; if (s && vp.duration) s.querySelector("i").style.setProperty("--p", vp.currentTime / vp.duration); });
