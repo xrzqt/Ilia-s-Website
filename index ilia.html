@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ilia Likakis: outside back (RB/LB/WB), Howard Community College, NJCAA D-II. Transfer target Spring/Fall 2027.">
+<title>Ilia Likakis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: night-match recruiting profile. Deep pitch green, chalk-white lines, floodlight yellow accent.
+   Scoreboard cards for results, a pitch diagram for positions, a timeline for club history. */
+:root {
+  --bg: #07130e;
+  --bg2: #0b1c15;
+  --card: #10241b;
+  --line: rgba(232,240,234,.12);
+  --chalk: #eef3ef;
+  --muted: #93a79b;
+  --flood: #f4d03f;
+  --win: #4ade80;
+  --loss: #f87171;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --sans: "Barlow", -apple-system, system-ui, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--chalk); font-family: var(--sans); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-transform: uppercase; letter-spacing: .01em; line-height: .95; text-wrap: balance; }
+.kicker { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: var(--flood); margin: 0; }
+.h2 { font-size: clamp(44px, 8vw, 84px); font-weight: 800; }
+.h2 em { font-style: normal; color: var(--flood); }
+section { padding-block: clamp(72px, 12vw, 130px); scroll-margin-top: 56px; }
+.sec-head { display: grid; gap: 14px; margin-bottom: 44px; }
+.sub { color: var(--muted); max-width: 56ch; margin: 0; }
+
+/* nav */
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 15; background: rgba(7,19,14,.78); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); border-bottom: 1px solid var(--line); }
+.nav-in { height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; }
+.brand span { color: var(--flood); }
+.links { display: flex; gap: 22px; font-family: var(--display); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 14px; }
+.links a { text-decoration: none; opacity: .75; transition: opacity .2s; }
+.links a:hover { opacity: 1; }
+.progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; transform-origin: left; transform: scaleX(var(--sp, 0)); background: var(--flood); }
+@media (max-width: 720px) { .links { display: none; } }
+
+/* hero */
+.hero { position: relative; isolation: isolate; padding-block: clamp(48px, 9vw, 100px) clamp(56px, 8vw, 90px); }
+.hero::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 auto 0 50%; width: 100vw; transform: translateX(-50%);
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgba(244,208,63,.16), transparent 70%),
+    radial-gradient(50% 45% at 10% 10%, rgba(255,255,255,.06), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0 80px, transparent 80px 160px);
+}
+.hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
+.hero-copy { display: grid; gap: 20px; min-width: 0; }
+.name { font-size: clamp(64px, 11.5vw, 136px); font-weight: 800; line-height: .82; letter-spacing: -.005em; }
+.name .last { display: block; -webkit-text-stroke: 2px var(--chalk); color: transparent; }
+.role { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 3vw, 26px); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.role b { color: var(--chalk); font-weight: 700; }
+.pill { display: inline-flex; align-items: center; gap: 8px; width: fit-content; font-family: var(--display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 14px; color: var(--bg); background: var(--flood); padding: 6px 12px; border-radius: 4px; }
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--bg); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border-radius: 6px; font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: transform .2s, background .2s, border-color .2s; }
+.btn.primary { background: var(--chalk); color: var(--bg); }
+.btn.primary:hover { transform: translateY(-2px); background: #fff; }
+.btn.ghost { border: 1px solid var(--line); }
+.btn.ghost:hover { border-color: var(--chalk); transform: translateY(-2px); }
+.btn svg { width: 16px; height: 16px; }
+.btn:focus-visible, .pos-btn:focus-visible { outline: 2px solid var(--flood); outline-offset: 3px; }
+
+/* pitch */
+.pitch-card { display: grid; gap: 14px; justify-items: center; }
+.pitch { width: min(330px, 100%); height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.5)); }
+.zone { transition: opacity .4s; opacity: 0; }
+.zone.on { opacity: 1; }
+.dot { transition: transform .5s cubic-bezier(.2,.8,.2,1), opacity .4s; transform-box: fill-box; transform-origin: center; }
+.dot.dim { opacity: .25; }
+.ring { transform-box: fill-box; transform-origin: center; animation: ring 2s ease-out infinite; }
+@keyframes ring { from { transform: scale(.6); opacity: .9; } to { transform: scale(2.2); opacity: 0; } }
+.pos-tabs { display: flex; gap: 6px; background: var(--card); padding: 5px; border-radius: 8px; }
+.pos-btn { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .1em; border: 0; background: transparent; color: var(--muted); padding: 8px 14px; border-radius: 5px; cursor: pointer; transition: background .2s, color .2s; }
+.pos-btn[aria-pressed="true"] { background: var(--flood); color: var(--bg); }
+.pos-cap { font-size: 14px; color: var(--muted); margin: 0; text-align: center; min-height: 2.6em; max-width: 30ch; }
+@media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; } }
+
+/* facts strip */
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.fact { padding: 22px 18px; display: grid; gap: 4px; border-right: 1px solid var(--line); min-width: 0; }
+.fact:nth-child(4n) { border-right: 0; }
+.fact:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+.fact .k { font-family: var(--display); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
+.fact .v { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 30px); line-height: 1.05; }
+@media (max-width: 720px) {
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .fact { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .fact:nth-child(2n) { border-right: 0; }
+  .fact:nth-last-child(-n+2) { border-bottom: 0; }
+}
+
+/* ticker */
+.ticker { overflow: hidden; background: var(--flood); color: var(--bg); padding-block: 12px; transform: rotate(-1.2deg); margin-block: 8px; }
+.ticker-track { display: flex; width: max-content; gap: 36px; animation: tick 30s linear infinite; font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.ticker-track span { display: inline-flex; gap: 36px; align-items: center; }
+.ticker-track span::after { content: "✦"; font-size: 14px; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* results */
+.results { display: grid; gap: 18px; }
+.match {
+  position: relative; background: var(--card); border-radius: 14px; overflow: hidden;
+  display: grid; grid-template-columns: 180px 1fr auto; align-items: center; gap: 24px; padding: 24px 28px;
+  border: 1px solid transparent; transition: border-color .3s, transform .3s;
+}
+.match:hover { border-color: var(--line); transform: translateY(-3px); }
+.match::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--res); }
+.match.w { --res: var(--win); } .match.l { --res: var(--loss); }
+.meta { display: grid; gap: 2px; min-width: 0; }
+.meta .comp { font-family: var(--display); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 14px; color: var(--flood); }
+.meta .date { font-size: 14px; color: var(--muted); }
+.board { display: grid; gap: 6px; min-width: 0; }
+.team { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; font-family: var(--display); font-weight: 700; font-size: clamp(20px, 3vw, 26px); text-transform: uppercase; letter-spacing: .03em; }
+.team .seed { color: var(--muted); font-weight: 600; font-size: .7em; margin-right: 6px; }
+.team .sc { font-variant-numeric: tabular-nums; font-size: 1.3em; min-width: 1.2ch; text-align: right; }
+.team.lost { color: var(--muted); }
+.note { font-size: 14px; color: var(--muted); }
+.res-badge { font-family: var(--display); font-weight: 800; font-size: 40px; width: 64px; height: 64px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--res) 16%, transparent); color: var(--res); }
+.res-badge small { display: block; font-size: 12px; letter-spacing: .1em; margin-top: -10px; }
+.clips { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; color: var(--muted); }
+.clip { font-family: var(--display); font-weight: 600; letter-spacing: .06em; font-size: 15px; color: var(--chalk); border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; font-variant-numeric: tabular-nums; }
+.clip::before { content: "▶ "; color: var(--flood); font-size: 11px; }
+@media (max-width: 720px) {
+  .match { grid-template-columns: 1fr auto; padding: 22px 20px 22px 24px; gap: 14px 16px; }
+  .meta { grid-column: 1 / -1; }
+  .clips { grid-column: 1 / -1; }
+  .res-badge { width: 54px; height: 54px; font-size: 32px; }
+}
+.season-note { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+.tag { font-family: var(--display); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 15px; padding: 8px 14px; border-radius: 6px; background: var(--card); }
+.tag b { color: var(--flood); }
+
+/* big numbers */
+.nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.num { background: var(--card); border-radius: 14px; padding: 26px 22px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.num .n { font-family: var(--display); font-weight: 800; font-size: clamp(52px, 7vw, 76px); line-height: .9; font-variant-numeric: tabular-nums; }
+.num .n i { font-style: normal; color: var(--flood); }
+.num .l { font-weight: 600; }
+.num .s { font-size: 14px; color: var(--muted); }
+@media (max-width: 820px) { .nums { grid-template-columns: repeat(2, 1fr); } }
+
+/* timeline */
+.timeline { position: relative; display: grid; gap: 14px; padding-left: 30px; }
+.timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--flood), var(--line)); }
+.stop { position: relative; background: var(--card); border-radius: 12px; padding: 20px 22px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; }
+.stop::before { content: ""; position: absolute; left: -29px; top: 26px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--flood); }
+.stop h3 { font-size: 26px; font-weight: 700; letter-spacing: .02em; }
+.stop .lg { color: var(--flood); font-family: var(--display); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; }
+.stop .yr { font-family: var(--display); font-weight: 600; letter-spacing: .06em; color: var(--muted); font-size: 16px; text-align: right; }
+.stop p, .stop ul { grid-column: 1 / -1; margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.stop ul { padding-left: 18px; display: grid; gap: 4px; }
+.stop .stat { grid-column: 1 / -1; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .03em; margin-top: 4px; }
+.stop .stat b { color: var(--flood); font-size: 1.3em; }
+.stop.main { background: linear-gradient(135deg, #17331f 0%, var(--card) 60%); }
+@media (max-width: 520px) { .stop { grid-template-columns: 1fr; } .stop .yr { text-align: left; } }
+.flags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+
+/* video */
+.video { background: var(--bg2); }
+.vids { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.vid { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 14px; overflow: hidden; text-decoration: none; display: grid; align-content: end; padding: 24px; isolation: isolate; border: 1px solid var(--line); }
+.vid::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(80% 90% at 70% 30%, rgba(244,208,63,.18), transparent 60%), linear-gradient(160deg, #163423, #0a1a12); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.vid:hover::before { transform: scale(1.06); }
+.vid svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: .35; }
+.play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-60%); width: 72px; height: 72px; border-radius: 50%; background: var(--chalk); display: grid; place-items: center; transition: transform .3s; box-shadow: 0 0 0 0 rgba(244,208,63,.5); animation: halo 2.4s ease-out infinite; }
+.vid:hover .play { transform: translate(-50%,-60%) scale(1.08); }
+@keyframes halo { 0% { box-shadow: 0 0 0 0 rgba(244,208,63,.45); } 100% { box-shadow: 0 0 0 26px rgba(244,208,63,0); } }
+.play svg { width: 26px; height: 26px; margin-left: 4px; }
+.vid h3 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+.vid span { color: var(--muted); font-size: 14px; }
+.vid:focus-visible { outline: 2px solid var(--flood); outline-offset: 3px; }
+@media (max-width: 720px) { .vids { grid-template-columns: 1fr; } }
+
+/* education + refs */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.box { background: var(--card); border-radius: 14px; padding: 26px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.box h3 { font-size: 28px; font-weight: 800; }
+.row { display: grid; gap: 2px; padding-top: 14px; border-top: 1px solid var(--line); }
+.row b { font-weight: 600; }
+.row span { color: var(--muted); font-size: 15px; }
+.row .gpa { font-family: var(--display); font-weight: 700; color: var(--flood); letter-spacing: .06em; font-size: 16px; }
+@media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
+
+/* contact */
+.contact { text-align: center; }
+.contact .h2 { margin-bottom: 18px; }
+.mail { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 5vw, 48px); letter-spacing: .02em; user-select: all; word-break: break-all; display: block; margin-block: 10px 22px; }
+.copy { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; height: 50px; padding: 0 26px; border: 0; border-radius: 6px; background: var(--flood); color: var(--bg); cursor: pointer; transition: transform .2s; }
+.copy:hover { transform: translateY(-2px); }
+.copy:focus-visible { outline: 2px solid var(--chalk); outline-offset: 3px; }
+footer { border-top: 1px solid var(--line); padding-block: 26px; color: var(--muted); font-size: 13px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+
+/* player */
+.player { position: relative; border-radius: 18px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; max-width: 100%; box-shadow: 0 40px 80px -30px rgba(0,0,0,.8), 0 0 0 1px var(--line); }
+.player video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.player::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, transparent 22%, transparent 62%, rgba(0,0,0,.7) 100%); }
+.p-top { position: absolute; z-index: 2; top: 16px; left: 18px; right: 18px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.p-game { font-family: var(--display); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 15px; background: rgba(7,19,14,.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 5px 10px; border-radius: 6px; }
+.p-count { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .08em; color: rgba(238,243,239,.8); font-variant-numeric: tabular-nums; }
+.p-big { position: absolute; z-index: 3; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(.9); width: 78px; height: 78px; border-radius: 50%; border: 0; background: rgba(238,243,239,.92); display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s; }
+.p-big svg { width: 28px; height: 28px; margin-left: 4px; }
+.player.paused .p-big { opacity: 1; pointer-events: auto; transform: translate(-50%,-50%) scale(1); }
+.p-bar { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 0 18px 12px; display: grid; gap: 8px; }
+.segs { display: flex; gap: 4px; }
+.seg { flex: var(--w, 1) 1 0; height: 4px; border-radius: 2px; background: rgba(255,255,255,.28); overflow: hidden; cursor: pointer; border: 0; padding: 0; }
+.seg i { display: block; height: 100%; width: 100%; background: var(--chalk); transform-origin: left; transform: scaleX(var(--p, 0)); }
+.seg.on i { background: var(--flood); }
+.p-ctl { display: flex; align-items: center; gap: 4px; }
+.p-ctl button { width: 38px; height: 38px; border: 0; border-radius: 50%; background: transparent; color: var(--chalk); cursor: pointer; display: grid; place-items: center; transition: background .2s; }
+.p-ctl button:hover { background: rgba(255,255,255,.14); }
+.p-ctl button svg { width: 18px; height: 18px; }
+.p-ctl button:focus-visible, .p-big:focus-visible, .seg:focus-visible, .flt:focus-visible, .chap:focus-visible, .watch:focus-visible { outline: 2px solid var(--flood); outline-offset: 2px; }
+.p-spacer { flex: 1; }
+@media (max-width: 560px) { .player { border-radius: 12px; } .p-top { top: 10px; left: 12px; right: 12px; } .p-game { font-size: 12px; } .p-bar { padding: 0 10px 6px; gap: 4px; } .p-ctl button { width: 32px; height: 32px; } .p-big { width: 60px; height: 60px; } }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+.flt { font-family: var(--display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 15px; border: 1px solid var(--line); background: transparent; color: var(--muted); padding: 8px 14px; border-radius: 999px; cursor: pointer; transition: all .2s; }
+.flt span { opacity: .6; margin-left: 4px; }
+.flt:hover { color: var(--chalk); border-color: var(--muted); }
+.flt[aria-pressed="true"] { background: var(--chalk); color: var(--bg); border-color: var(--chalk); }
+.chapters { margin-top: 16px; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 10px; scrollbar-width: thin; }
+.chap { flex: 0 0 168px; scroll-snap-align: start; border: 0; padding: 0; background: transparent; color: var(--chalk); text-align: left; cursor: pointer; display: grid; gap: 6px; }
+.chap .th { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: var(--card); outline: 2px solid transparent; outline-offset: 2px; transition: outline-color .2s, transform .3s; }
+.chap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+.chap:hover img { transform: scale(1.06); }
+.chap .dur { position: absolute; right: 6px; bottom: 6px; font-family: var(--display); font-weight: 600; font-size: 13px; background: rgba(0,0,0,.65); padding: 1px 6px; border-radius: 4px; font-variant-numeric: tabular-nums; }
+.chap.on .th { outline-color: var(--flood); }
+.chap .cl { font-family: var(--display); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 14px; }
+.chap .cg { font-size: 13px; color: var(--muted); margin-top: -4px; }
+.yt { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 18px; font-size: 15px; }
+.yt a { color: var(--muted); text-decoration: none; }
+.yt a:hover { color: var(--chalk); }
+.watch { font-family: var(--display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 15px; color: var(--bg); background: var(--flood); border: 0; border-radius: 6px; padding: 6px 12px; cursor: pointer; transition: transform .2s; }
+.watch:hover { transform: translateY(-2px); }
+
+.reach { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+.rc { background: var(--card); border-radius: 14px; padding: 22px 26px; display: grid; gap: 8px; justify-items: center; min-width: 0; max-width: 100%; }
+.rc .k { font-family: var(--display); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; color: var(--muted); }
+.rc .mail { margin: 0 0 6px; font-size: clamp(22px, 4vw, 34px); }
+
+/* reveal */
+.rv { transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.js .rv:not(.in) { opacity: .25; transform: translateY(36px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .rv:not(.in) { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="progress" id="prog" aria-hidden="true"></div>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Ilia <span>Likakis</span></a>
+    <div class="links"><a href="#season">2026 Season</a><a href="#career">Career</a><a href="#video">Video</a><a href="#contact">Contact</a></div>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="wrap hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="pill">Transfer target · Spring / Fall 2027</span>
+        <h1 class="name">Ilia<span class="last">Likakis</span></h1>
+        <p class="role"><b>Outside back</b> · RB / LB / WB · NJCAA D-II</p>
+        <p class="sub">Versatile, right-footed outside back with two seasons as a starter for a nationally ranked Howard Community College side. Comfortable on both flanks, with club and international experience in Germany, Greece and Bosnia &amp; Herzegovina.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#video"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Watch highlights</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="pitch-card">
+        <svg class="pitch" id="pitch" viewBox="0 0 300 420" role="img" aria-label="Pitch diagram showing the positions Ilia plays">
+          <defs>
+            <pattern id="mow" width="300" height="60" patternUnits="userSpaceOnUse"><rect width="300" height="30" fill="#14402a"/><rect y="30" width="300" height="30" fill="#123a26"/></pattern>
+            <radialGradient id="zoneG"><stop offset="0" stop-color="#f4d03f" stop-opacity=".55"/><stop offset="1" stop-color="#f4d03f" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect x="0" y="0" width="300" height="420" rx="14" fill="url(#mow)"/>
+          <g fill="none" stroke="#eef3ef" stroke-opacity=".7" stroke-width="2">
+            <rect x="16" y="16" width="268" height="388" rx="2"/>
+            <line x1="16" y1="210" x2="284" y2="210"/>
+            <circle cx="150" cy="210" r="38"/>
+            <rect x="80" y="16" width="140" height="58"/><rect x="118" y="16" width="64" height="22"/>
+            <path d="M120 74 A 34 34 0 0 0 180 74"/>
+            <rect x="80" y="346" width="140" height="58"/><rect x="118" y="382" width="64" height="22"/>
+            <path d="M120 346 A 34 34 0 0 1 180 346"/>
+          </g>
+          <circle cx="150" cy="210" r="3" fill="#eef3ef"/>
+          <!-- zones (attacking up) -->
+          <ellipse class="zone" data-z="RB" cx="252" cy="300" rx="40" ry="80" fill="url(#zoneG)"/>
+          <ellipse class="zone" data-z="LB" cx="48" cy="300" rx="40" ry="80" fill="url(#zoneG)"/>
+          <ellipse class="zone" data-z="WB" cx="252" cy="200" rx="42" ry="120" fill="url(#zoneG)"/>
+          <!-- team shape -->
+          <g fill="#eef3ef" fill-opacity=".85">
+            <circle cx="150" cy="390" r="7"/>
+            <circle cx="115" cy="320" r="7"/><circle cx="185" cy="320" r="7"/>
+            <circle cx="120" cy="240" r="7"/><circle cx="180" cy="240" r="7"/>
+            <circle cx="150" cy="160" r="7"/>
+            <circle cx="70" cy="130" r="7"/><circle cx="230" cy="130" r="7"/>
+            <circle cx="150" cy="80" r="7"/>
+          </g>
+          <g class="dot" id="lbDot"><circle cx="48" cy="300" r="7" fill="#eef3ef" fill-opacity=".85"/></g>
+          <g id="ilia" style="transition: transform .6s cubic-bezier(.2,.8,.2,1)">
+            <circle class="ring" cx="252" cy="300" r="12" fill="none" stroke="#f4d03f" stroke-width="2"/>
+            <circle cx="252" cy="300" r="11" fill="#f4d03f"/>
+            <text x="252" y="304.5" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="800" font-size="12" fill="#07130e">IL</text>
+          </g>
+          <g class="dot" id="rbDot" style="opacity:0"><circle cx="252" cy="300" r="7" fill="#eef3ef" fill-opacity=".85"/></g>
+        </svg>
+        <div class="pos-tabs" role="group" aria-label="Choose a position">
+          <button class="pos-btn" data-p="RB" aria-pressed="true">RB</button>
+          <button class="pos-btn" data-p="LB" aria-pressed="false">LB</button>
+          <button class="pos-btn" data-p="WB" aria-pressed="false">WB</button>
+        </div>
+        <p class="pos-cap" id="posCap">Right back. His primary role at Howard, on his stronger foot.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="facts rv">
+      <div class="fact"><span class="k">Height</span><span class="v">5′10″</span></div>
+      <div class="fact"><span class="k">Weight</span><span class="v">165 lbs</span></div>
+      <div class="fact"><span class="k">Preferred foot</span><span class="v">Right</span></div>
+      <div class="fact"><span class="k">Age</span><span class="v">21</span></div>
+      <div class="fact"><span class="k">Citizenship</span><span class="v">USA &amp; Greece</span></div>
+      <div class="fact"><span class="k">Languages</span><span class="v">EN · GR · SR</span></div>
+      <div class="fact"><span class="k">Recruiting</span><span class="v">NCAA / NAIA</span></div>
+      <div class="fact"><span class="k">Hometown</span><span class="v">Ellicott City, MD</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:72px; overflow:hidden; padding-block:10px">
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">
+      <span>Region 20 finalist</span><span>#10 nationally ranked program</span><span>Two-season starter</span><span>17 goals in Germany</span><span>Jefferson Cup champion</span><span>Both flanks</span>
+      <span>Region 20 finalist</span><span>#10 nationally ranked program</span><span>Two-season starter</span><span>17 goals in Germany</span><span>Jefferson Cup champion</span><span>Both flanks</span>
+    </div></div>
+  </div>
+
+  <!-- SEASON -->
+  <section id="season">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="kicker">Howard Community College · 2026</p>
+        <h2 class="h2">The <em>2026</em> run</h2>
+        <p class="sub">Key results from Howard’s 2026 season, through to the NJCAA Region 20 final.</p>
+      </div>
+      <div class="results">
+        <article class="match l rv">
+          <div class="meta"><span class="comp">Region 20 Championship</span><span class="date">Sat, Oct 31, 2026 · CCBC Dundalk, MD (neutral)</span></div>
+          <div class="board">
+            <div class="team lost"><span><span class="seed">#2</span>Howard Dragons</span><span class="sc" data-score="1">1</span></div>
+            <div class="team"><span><span class="seed">#1</span>CCBC Essex Knights</span><span class="sc" data-score="2">2</span></div>
+            <span class="note">Lost in double overtime to the top seed.</span>
+          </div>
+          <div class="res-badge">L<small>2OT</small></div>
+          <div class="clips"><button class="watch" data-game="final">▶ Watch 8 clips</button></div>
+        </article>
+        <article class="match w rv">
+          <div class="meta"><span class="comp">Region 20 Quarterfinal</span><span class="date">Sat, Oct 24, 2026 · Dragon Stadium, Columbia, MD</span></div>
+          <div class="board">
+            <div class="team"><span><span class="seed">#2</span>Howard</span><span class="sc" data-score="3">3</span></div>
+            <div class="team lost"><span><span class="seed">#7</span>Cecil College</span><span class="sc" data-score="0">0</span></div>
+            <span class="note">Clean sheet in the playoffs.</span>
+          </div>
+          <div class="res-badge">W</div>
+          <div class="clips"><button class="watch" data-game="qf">▶ Watch 3 clips</button></div>
+        </article>
+        <article class="match w rv">
+          <div class="meta"><span class="comp">Regular season</span><span class="date">Fri, Aug 28, 2026 · Dragon Stadium, Columbia, MD</span></div>
+          <div class="board">
+            <div class="team"><span>Howard</span><span class="sc" data-score="6">6</span></div>
+            <div class="team lost"><span>Prince George’s CC</span><span class="sc" data-score="1">1</span></div>
+            <span class="note">Season-opening statement win at home.</span>
+          </div>
+          <div class="res-badge">W</div>
+          <div class="clips"><button class="watch" data-game="pg">▶ Watch 3 clips</button></div>
+        </article>
+      </div>
+      <div class="season-note rv">
+        <span class="tag"><b>#2</b> seed, Region 20</span>
+        <span class="tag">Region 20 <b>finalist</b></span>
+        <span class="tag">Program ranked <b>#10</b> nationally</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section style="padding-top:0">
+    <div class="wrap nums">
+      <div class="num rv"><span class="n" data-count="17">17</span><span class="l">Goals in Germany</span><span class="s">In 19 appearances for SW Eintracht Zwingenberg</span></div>
+      <div class="num rv"><span class="n"><i>#</i><span data-count="10">10</span></span><span class="l">National ranking</span><span class="s">Howard CC, NJCAA Division II</span></div>
+      <div class="num rv"><span class="n" data-count="2">2</span><span class="l">JUCO seasons</span><span class="s">Starting most matches, 15–20 per season</span></div>
+      <div class="num rv"><span class="n" data-count="4">4</span><span class="l">Countries played</span><span class="s">USA, Germany, Greece, Bosnia &amp; Herzegovina</span></div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section id="career" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="kicker">Career</p>
+        <h2 class="h2">From <em>club</em> to college</h2>
+      </div>
+      <div class="timeline">
+        <div class="stop main rv">
+          <h3>Howard Community College</h3><span class="yr">2025 – 2026</span>
+          <span class="lg">NJCAA Division II · Head Coach Rob Ryerson</span>
+          <ul>
+            <li>Two-season player for a nationally ranked program (#10 nationally during his tenure)</li>
+            <li>About 15–20 matches per season, starting most of them</li>
+            <li>Primary roles at right back and left back, also used as a wingback</li>
+            <li>Part of defensive performances and shutouts, including wins over CCBC Catonsville, Cecil College and College of Southern Maryland</li>
+          </ul>
+        </div>
+        <div class="stop rv">
+          <h3>SW Eintracht Zwingenberg</h3><span class="yr">Aug – Dec 2024</span>
+          <span class="lg">Kreisliga C · Germany</span>
+          <span class="stat"><b>17</b> goals in 19 appearances</span>
+          <p>Played as a winger and attacking midfielder.</p>
+        </div>
+        <div class="stop rv">
+          <h3>Maryland Alliance FC</h3><span class="yr">Mar – Jun 2023</span>
+          <span class="lg">UPSL Premier</span>
+          <span class="stat"><b>3</b> goals in 5 appearances</span>
+        </div>
+        <div class="stop rv">
+          <h3>FC 4188</h3><span class="yr">Club</span>
+          <span class="lg">MSSL</span>
+          <span class="stat"><b>1</b> goal, <b>2</b> assists in 5 appearances</span>
+        </div>
+        <div class="stop rv">
+          <h3>Christos FC</h3><span class="yr">2022 – 2024</span>
+          <span class="lg">USL League Two</span>
+          <p>Invited training player with the senior team.</p>
+        </div>
+        <div class="stop rv">
+          <h3>Brausa 05 United</h3><span class="yr">2020 – 2022</span>
+          <span class="lg">EDP / USYS National League</span>
+          <p>Team ranked No. 1 nationally at U15/U16. Jefferson Cup champion.</p>
+        </div>
+      </div>
+      <div class="flags rv">
+        <span class="tag">International training &amp; exhibitions: <b>Germany</b> · <b>Greece</b> · <b>Bosnia &amp; Herzegovina</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video" id="video">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="kicker">Film · 2026 season</p>
+        <h2 class="h2">Watch him <em>play</em></h2>
+        <p class="sub">16 clips from the 2026 season. They play straight through, or pick a game below.</p>
+      </div>
+      <div class="player" id="player">
+        <video id="vp" playsinline muted preload="metadata"></video>
+        <div class="p-top"><span class="p-game" id="pGame"></span><span class="p-count" id="pCount"></span></div>
+        <button class="p-big" id="pBig" aria-label="Play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="#07130e"/></svg></button>
+        <div class="p-bar">
+          <div class="segs" id="segs"></div>
+          <div class="p-ctl">
+            <button id="pPrev" aria-label="Previous clip"><svg viewBox="0 0 16 16"><path d="M3 3h2v10H3zM14 3v10L6 8z" fill="currentColor"/></svg></button>
+            <button id="pPlay" aria-label="Pause"><svg viewBox="0 0 16 16" id="icPlay"><path d="M4 3h3v10H4zM9 3h3v10H9z" fill="currentColor"/></svg></button>
+            <button id="pNext" aria-label="Next clip"><svg viewBox="0 0 16 16"><path d="M11 3h2v10h-2zM2 3v10l8-5z" fill="currentColor"/></svg></button>
+            <span class="p-spacer"></span>
+            <button id="pFull" aria-label="Full screen"><svg viewBox="0 0 16 16"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="filters" role="group" aria-label="Filter clips by game">
+        <button class="flt" data-f="all" aria-pressed="true">All games <span>16</span></button>
+        <button class="flt" data-f="final" aria-pressed="false">Region final <span>8</span></button>
+        <button class="flt" data-f="qf" aria-pressed="false">Quarterfinal <span>3</span></button>
+        <button class="flt" data-f="pg" aria-pressed="false">vs Prince George’s <span>3</span></button>
+      </div>
+      <div class="chapters" id="chapters"></div>
+      <div class="yt">
+        <a href="https://youtu.be/Bn2_3cILjm4" target="_blank" rel="noopener">Highlight reel on YouTube ↗</a>
+        <a href="https://www.youtube.com/watch?v=ed-vK1kcLAk" target="_blank" rel="noopener">Full game on YouTube ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + REFS -->
+  <section>
+    <div class="wrap two">
+      <div class="box rv">
+        <p class="kicker">Academics</p>
+        <h3>Education</h3>
+        <div class="row"><b>Howard Community College</b><span>General Studies · Columbia, MD · Jan 2025 – Dec 2026</span><span>60+ credits completed or in progress, associate degree expected December 2026</span><span class="gpa">GPA 2.70</span></div>
+        <div class="row"><b>Mount Hebron High School</b><span>Ellicott City, MD · 2019 – 2023</span><span class="gpa">GPA 3.40</span></div>
+      </div>
+      <div class="box rv">
+        <p class="kicker">References</p>
+        <h3>Coaches</h3>
+        <div class="row"><b>Rob Ryerson</b><span>Head Men’s Soccer Coach, Howard Community College</span><span>rryerson@howardcc.edu</span></div>
+        <div class="row"><b>Adauto Neto</b><span>Brausa 05 United</span><span>Contact details available on request</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap rv">
+      <p class="kicker">Recruiting contact</p>
+      <h2 class="h2">Coaches, <em>reach out</em></h2>
+      <p class="sub" style="margin-inline:auto">Available to transfer for Spring or Fall 2027 at the NCAA or NAIA level.</p>
+      <div class="reach">
+        <div class="rc"><span class="k">Email</span><span class="mail" id="mail">likakis.ilia@outlook.com</span><button class="copy" data-copy="likakis.ilia@outlook.com">Copy email</button></div>
+        <div class="rc"><span class="k">Phone</span><span class="mail" id="phone">(240) 571-6586</span><button class="copy" data-copy="240-571-6586">Copy number</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ilia Likakis</span><span>Outside back · Ellicott City, MD</span></div></footer>
+
+<script>
+(function () {
+  document.documentElement.classList.add("js");
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var prog = document.getElementById("prog");
+  function sp() { var h = document.documentElement.scrollHeight - innerHeight; prog.style.setProperty("--sp", h > 0 ? scrollY / h : 0); }
+  addEventListener("scroll", sp, { passive: true }); sp();
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var t = document.querySelector(a.getAttribute("href")); if (!t) return;
+      e.preventDefault(); t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+  });
+
+  // positions
+  var spots = { RB: [252, 300], LB: [48, 300], WB: [252, 200] };
+  var caps = {
+    RB: "Right back. His primary role at Howard, on his stronger foot.",
+    LB: "Left back. A regular role at Howard, comfortable on either flank.",
+    WB: "Wingback. Gets forward to attack, drawing on his winger background."
+  };
+  var ilia = document.getElementById("ilia"), lbDot = document.getElementById("lbDot"), rbDot = document.getElementById("rbDot");
+  var zones = document.querySelectorAll(".zone"), cap = document.getElementById("posCap");
+  function setPos(p) {
+    var d = spots[p];
+    ilia.setAttribute("transform", "translate(" + (d[0] - 252) + " " + (d[1] - 300) + ")");
+    zones.forEach(function (z) { z.classList.toggle("on", z.dataset.z === p); });
+    lbDot.style.opacity = p === "LB" ? 0 : 1;
+    rbDot.style.opacity = p === "RB" ? 0 : 1;
+    cap.textContent = caps[p];
+    document.querySelectorAll(".pos-btn").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.p === p); });
+  }
+  document.querySelectorAll(".pos-btn").forEach(function (b) { b.addEventListener("click", function () { setPos(b.dataset.p); stop(); }); });
+  setPos("RB");
+  var order = ["RB", "LB", "WB"], k = 0, timer = null;
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  if (!reduce) timer = setInterval(function () { k = (k + 1) % 3; setPos(order[k]); }, 3200);
+
+  // reveal + counters
+  function count(el) {
+    var end = +el.dataset.count; if (reduce) { el.textContent = end; return; }
+    var t0 = null;
+    function step(t) { if (!t0) t0 = t; var p = Math.min((t - t0) / 1100, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        e.target.querySelectorAll("[data-count]").forEach(count);
+        e.target.querySelectorAll("[data-score]").forEach(function (s) { s.dataset.count = s.dataset.score; count(s); });
+        io.unobserve(e.target);
+      });
+    }, { threshold: .15 });
+    document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });
+  } else document.querySelectorAll(".rv").forEach(function (el) { el.classList.add("in"); });
+
+
+  // ---------- clip player ----------
+  var G = { final: "Region 20 Final vs #1 CCBC Essex", qf: "Region 20 QF vs #7 Cecil", pg: "vs Prince George’s CC", home: "Home · Dragon Stadium" };
+  var CL = [
+    ["c01","qf",12.7],["c02","pg",15.8],["c03","final",16.1],["c04","final",9.7],["c05","qf",9.9],["c06","pg",12.6],
+    ["c07","final",7.9],["c08","qf",6.8],["c09","final",7.3],["c10","home",8.2],["c11","final",12.0],["c12","final",12.3],
+    ["c13","final",8.8],["c14","final",8.0],["c15","pg",7.3],["c16","final",5.1]
+  ];
+  var vp = document.getElementById("vp"), player = document.getElementById("player"), segsEl = document.getElementById("segs");
+  var chapEl = document.getElementById("chapters"), pGame = document.getElementById("pGame"), pCount = document.getElementById("pCount");
+  var list = CL.slice(), cur = 0, started = false, base = "clips/", tried = false;
+  function fmt(t) { t = Math.round(t); return "0:" + (t < 10 ? "0" : "") + t; }
+  function build() {
+    segsEl.innerHTML = ""; chapEl.innerHTML = "";
+    list.forEach(function (c, i) {
+      var b = document.createElement("button"); b.className = "seg"; b.style.setProperty("--w", c[2]); b.setAttribute("aria-label", "Clip " + (i + 1));
+      b.innerHTML = "<i></i>"; b.addEventListener("click", function () { load(i, true); }); segsEl.appendChild(b);
+      var n = CL.indexOf(c) + 1;
+      var ch = document.createElement("button"); ch.className = "chap";
+      ch.innerHTML = '<span class="th"><img src="clips/' + c[0] + '.jpg" alt="" loading="lazy" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=\'' + c[0] + '.jpg\'}"><span class="dur">' + fmt(c[2]) + '</span></span><span class="cl">Clip ' + (n < 10 ? "0" : "") + n + '</span><span class="cg">' + G[c[1]] + '</span>';
+      ch.addEventListener("click", function () { load(i, true); }); chapEl.appendChild(ch);
+    });
+  }
+  function mark() {
+    segsEl.querySelectorAll(".seg").forEach(function (s, i) { s.classList.toggle("on", i === cur); s.querySelector("i").style.setProperty("--p", i < cur ? 1 : 0); });
+    chapEl.querySelectorAll(".chap").forEach(function (c, i) { c.classList.toggle("on", i === cur); });
+    var on = chapEl.children[cur]; if (on && started) chapEl.scrollTo({ left: on.offsetLeft - chapEl.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
+    pGame.textContent = G[list[cur][1]]; pCount.textContent = (cur + 1) + " / " + list.length;
+  }
+  function load(i, play) {
+    cur = (i + list.length) % list.length;
+    vp.src = base + list[cur][0] + ".mp4"; vp.poster = base + list[cur][0] + ".jpg";
+    mark(); if (play) go();
+  }
+  function go() { started = true; var p = vp.play(); if (p && p.catch) p.catch(function () { setPaused(true); }); }
+  function setPaused(x) {
+    player.classList.toggle("paused", x);
+    document.getElementById("icPlay").innerHTML = x ? '<path d="M4 2.5v11l9-5.5z" fill="currentColor"/>' : '<path d="M4 3h3v10H4zM9 3h3v10H9z" fill="currentColor"/>';
+    document.getElementById("pPlay").setAttribute("aria-label", x ? "Play" : "Pause");
+  }
+  vp.addEventListener("error", function () {
+    if (tried) return; tried = true; base = base ? "" : "clips/";
+    var wasStarted = started; vp.src = base + list[cur][0] + ".mp4"; vp.poster = base + list[cur][0] + ".jpg"; if (wasStarted) go();
+  });
+  vp.addEventListener("play", function () { setPaused(false); });
+  vp.addEventListener("pause", function () { setPaused(true); });
+  vp.addEventListener("timeupdate", function () { var s = segsEl.children[cur]; if (s && vp.duration) s.querySelector("i").style.setProperty("--p", vp.currentTime / vp.duration); });
+  vp.addEventListener("ended", function () { load(cur + 1, true); });
+  document.getElementById("pPlay").addEventListener("click", function () { vp.paused ? go() : vp.pause(); });
+  document.getElementById("pBig").addEventListener("click", go);
+  vp.addEventListener("click", function () { vp.paused ? go() : vp.pause(); });
+  document.getElementById("pNext").addEventListener("click", function () { load(cur + 1, true); });
+  document.getElementById("pPrev").addEventListener("click", function () { load(vp.currentTime > 2 ? cur : cur - 1, true); });
+  document.getElementById("pFull").addEventListener("click", function () {
+    try { if (player.requestFullscreen) player.requestFullscreen().catch(function () { vp.webkitEnterFullscreen && vp.webkitEnterFullscreen(); }); else if (vp.webkitEnterFullscreen) vp.webkitEnterFullscreen(); } catch (e) {}
+  });
+  function filter(f) {
+    list = f === "all" ? CL.slice() : CL.filter(function (c) { return c[1] === f; });
+    document.querySelectorAll(".flt").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.f === f); });
+    build(); load(0, started);
+  }
+  document.querySelectorAll(".flt").forEach(function (b) { b.addEventListener("click", function () { filter(b.dataset.f); }); });
+  document.querySelectorAll(".watch").forEach(function (b) {
+    b.addEventListener("click", function () {
+      filter(b.dataset.game); document.getElementById("video").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); go();
+    });
+  });
+  build(); load(0, false); setPaused(true);
+  if ("IntersectionObserver" in window && !reduce) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting && !started) go(); else if (!e.isIntersecting && !vp.paused) vp.pause(); });
+    }, { threshold: .5 }).observe(player);
+  }
+
+  // copy
+  document.querySelectorAll(".copy").forEach(function (cb) {
+    var label = cb.textContent, txt = cb.previousElementSibling;
+    cb.addEventListener("click", function () {
+      function sel() { var r = document.createRange(); r.selectNodeContents(txt); var s = getSelection(); s.removeAllRanges(); s.addRange(r); cb.textContent = "Selected, press copy"; }
+      try { navigator.clipboard.writeText(cb.dataset.copy).then(function () { cb.textContent = "Copied"; setTimeout(function () { cb.textContent = label; }, 1800); }, sel); } catch (e) { sel(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
